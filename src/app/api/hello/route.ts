@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 import { client as redis } from '~/utils/redis'
 
 export  async function GET() {
-  if (!redis.isOpen) await redis.connect()
+  await redis.connect()
 
   redis.set('foo', 'bar')
 
