@@ -1,3 +1,5 @@
+'use client';
+
 import useRedis from '~/hooks/useRedis';
 
 export default function Home() {
