@@ -2,15 +2,8 @@
 
 import { useState, useEffect } from 'react'
 
-export type Data = {
-  id: number;
-  name: string;
-}
-
-
-
 export default function useRedis() {
-  const [data, setData] = useState<Data[]>([]);
+  const [data, setData] = useState<string[]>([]);
 
   useEffect(() => {
     async function fetchRedisData() {

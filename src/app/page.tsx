@@ -10,7 +10,8 @@ export default function Home() {
       <h1>Hi Abby!</h1>
       <ul>
         { 
-          data.map(d => <li key={d.id}>{d.name}</li>) 
+          Object.entries(data).map(
+            ([id, msg]) => <li key={id}>{msg}</li>) 
           ?? <li>loading...</li>
         }
       </ul>
